@@ -1,6 +1,6 @@
 # XXVerticalButton
 
-[![CI Status](http://img.shields.io/travis/汤海波/XXVerticalButton.svg?style=flat)](https://travis-ci.org/汤海波/XXVerticalButton)
+[![CI Status](http://img.shields.io/travis/cythb/XXVerticalButton.svg?style=flat)](https://travis-ci.org/cythb/XXVerticalButton)
 [![Version](https://img.shields.io/cocoapods/v/XXVerticalButton.svg?style=flat)](http://cocoapods.org/pods/XXVerticalButton)
 [![License](https://img.shields.io/cocoapods/l/XXVerticalButton.svg?style=flat)](http://cocoapods.org/pods/XXVerticalButton)
 [![Platform](https://img.shields.io/cocoapods/p/XXVerticalButton.svg?style=flat)](http://cocoapods.org/pods/XXVerticalButton)
