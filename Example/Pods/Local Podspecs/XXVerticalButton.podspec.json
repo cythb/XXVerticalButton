@@ -1,0 +1,22 @@
+{
+  "name": "XXVerticalButton",
+  "version": "0.1.0",
+  "summary": "A short description of XXVerticalButton.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/汤海波/XXVerticalButton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "汤海波": "thb@luochen.com"
+  },
+  "source": {
+    "git": "https://github.com/汤海波/XXVerticalButton.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XXVerticalButton/Classes/**/*"
+}

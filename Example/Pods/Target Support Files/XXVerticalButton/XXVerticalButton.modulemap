@@ -1,0 +1,6 @@
+framework module XXVerticalButton {
+  umbrella header "XXVerticalButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

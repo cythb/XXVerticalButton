@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="akl-IN-j73">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zc7-Hg-YFN">
+            <objects>
+                <viewController id="akl-IN-j73" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7TS-Gf-tmx"/>
+                        <viewControllerLayoutGuide type="bottom" id="MXh-pW-Vok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="itD-hh-uwT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXO-QL-Iaj" customClass="XXVerticalButton" customModule="XXVerticalButton">
+                                <rect key="frame" x="159" y="40" width="57" height="87"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button" image="apple"/>
+                                <state key="highlighted" image="apple-p"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="verticallyAlign" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="verticallySpacing">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDD-AC-hzc" customClass="XXVerticalButton" customModule="XXVerticalButton">
+                                <rect key="frame" x="137.5" y="147" width="100" height="150"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Brz-mR-mLQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="nOf-yo-f2J"/>
+                                </constraints>
+                                <state key="normal" image="apple"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="verticallyAlign" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="secondaryImage" value="apple"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="secondaryHighlightedImage" value="apple-p"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="verticallySpacing">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4JF-CC-Fhx" customClass="XXVerticalButton" customModule="XXVerticalButton">
+                                <rect key="frame" x="137.5" y="317" width="100" height="100"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0Io-tx-wdH"/>
+                                    <constraint firstAttribute="width" constant="100" id="xvH-ar-HXf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="apple"/>
+                                <state key="highlighted" image="apple-p"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="verticallyAlign" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="verticallySpacing">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VXO-QL-Iaj" firstAttribute="centerX" secondItem="itD-hh-uwT" secondAttribute="centerX" id="4IH-xH-GTE"/>
+                            <constraint firstItem="cDD-AC-hzc" firstAttribute="centerX" secondItem="itD-hh-uwT" secondAttribute="centerX" id="GQD-UF-sRe"/>
+                            <constraint firstItem="4JF-CC-Fhx" firstAttribute="top" secondItem="cDD-AC-hzc" secondAttribute="bottom" constant="20" id="Jqs-XM-j3z"/>
+                            <constraint firstItem="cDD-AC-hzc" firstAttribute="top" secondItem="VXO-QL-Iaj" secondAttribute="bottom" constant="20" id="VlA-PG-ub6"/>
+                            <constraint firstItem="VXO-QL-Iaj" firstAttribute="top" secondItem="7TS-Gf-tmx" secondAttribute="bottom" constant="20" id="Yfq-6M-8DF"/>
+                            <constraint firstItem="4JF-CC-Fhx" firstAttribute="centerX" secondItem="itD-hh-uwT" secondAttribute="centerX" id="nPH-5D-fcR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3m-a1-qMP" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="apple" width="50" height="50"/>
+        <image name="apple-p" width="50" height="50"/>
+    </resources>
+</document>
