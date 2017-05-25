@@ -9,34 +9,21 @@
 Pod::Spec.new do |s|
   s.name             = 'XXVerticalButton'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of XXVerticalButton.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'An Vertically aligned iOS button write with Swift.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+The reason for creating this project is that VerticallyButton seems to be no longer maintained. I submitted the PR, but it was not merged in time. Thanks to VerticallyButton achieve what I needed. So I developed and maintained this project on the basis of VerticallyButton.
                        DESC
 
-  s.homepage         = 'https://github.com/汤海波/XXVerticalButton'
+  s.homepage         = 'https://github.com/cythb/XXVerticalButton'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '汤海波' => 'thb@luochen.com' }
-  s.source           = { :git => 'https://github.com/汤海波/XXVerticalButton.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'iHugo' => 'cythbgy@gmail.com' }
+  s.source           = { :git => 'https://github.com/cythb/XXVerticalButton.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/ihugo_cc'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'XXVerticalButton/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'XXVerticalButton' => ['XXVerticalButton/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit'
 end
