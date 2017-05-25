@@ -20,7 +20,7 @@ The reason for creating this project is that VerticallyButton seems to be no lon
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'iHugo' => 'cythbgy@gmail.com' }
   s.source           = { :git => 'https://github.com/cythb/XXVerticalButton.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/ihugo_cc'
+  #s.social_media_url = 'https://twitter.com/ihugo_cc'
 
   s.ios.deployment_target = '8.0'
 
