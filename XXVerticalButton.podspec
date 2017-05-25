@@ -16,7 +16,7 @@ The reason for creating this project is that VerticallyButton seems to be no lon
                        DESC
 
   s.homepage         = 'https://github.com/cythb/XXVerticalButton'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://github.com/cythb/XXVerticalButton/raw/master/Screenshots/Screenshots.gif', 'https://github.com/cythb/XXVerticalButton/raw/master/Screenshots/Screenshots.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'iHugo' => 'cythbgy@gmail.com' }
   s.source           = { :git => 'https://github.com/cythb/XXVerticalButton.git', :tag => s.version.to_s }

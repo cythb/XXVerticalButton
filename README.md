@@ -11,7 +11,9 @@ The reason for creating this project is that [VerticallyButton](https://github.c
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Screenshots
+![](https://github.com/cythb/XXVerticalButton/raw/master/Screenshots/Screenshots.gif)
+![](https://github.com/cythb/XXVerticalButton/raw/master/Screenshots/Screenshots.png)
 
 ## Installation
 
