@@ -14,7 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Screenshots
 ![](https://github.com/cythb/XXVerticalButton/raw/master/Screenshots/Screenshots.gif)
 ![](https://github.com/cythb/XXVerticalButton/raw/master/Screenshots/Screenshots.png)
-![](https://github.com/cythb/XXVerticalButton/raw/master/Screenshots/Support_fixed_size.png)
+![](https://github.com/cythb/XXVerticalButton/raw/0.1.1/Screenshots/Support_fixed_size.png)
 
 ## Installation
 
