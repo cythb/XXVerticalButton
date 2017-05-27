@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import XXVerticalButton
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+//        let button = XXVerticalButton(frame: CGRect(x: 0, y: 20, width: 100, height: 100))
+//        button.verticallyAlign = true
+//        button.setImage(UIImage(named: "apple"), for: .normal)
+//        button.setTitle("button", for: .normal)
+//        button.backgroundColor = UIColor.red
+//        self.view.addSubview(button)
     }
 
     override func didReceiveMemoryWarning() {

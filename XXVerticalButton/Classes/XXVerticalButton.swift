@@ -33,6 +33,8 @@ open class XXVerticalButton: UIButton {
     private func configureVertically() {
         guard verticallyAlign else { return }
         
+        self.clipsToBounds = true
+        
         if let secondaryImage = isHighlighted ? secondaryHighlightedImage : secondaryImage {
             let secondaryImageSize = secondaryImage.size
             
@@ -68,21 +70,24 @@ open class XXVerticalButton: UIButton {
     override open func draw(_ rect: CGRect) {
         configureVertically()
         invalidateIntrinsicContentSize()
+        
+        // remove constrains of lable with image
+        if let cs = self.imageView?.superview?.constraints {
+            let imageContraints = cs.filter({ (constraint) -> Bool in
+                return (constraint.firstItem as? NSObject == self.imageView || constraint.secondItem as? NSObject == self.imageView) && (constraint.firstAttribute == .left || constraint.firstAttribute == .right)
+            })
+            let removeContraints = imageContraints.filter({ (constraint) -> Bool in
+                return constraint.relation == NSLayoutRelation.equal;
+            })
+            for c in removeContraints {
+                c.isActive = false
+            }
+        }
+        
         super.draw(rect)
     }
     
     override open var intrinsicContentSize: CGSize {
-        // remove constrains of lable with image
-        var removeContraints = [NSLayoutConstraint]()
-        if let cs = self.imageView?.superview?.constraints {
-            for c in cs {
-                if (c.firstItem as? NSObject == self.imageView || c.secondItem as? NSObject == self.imageView) && (c.firstAttribute == .left || c.firstAttribute == .right) {
-                    removeContraints.append(c)
-                }
-            }
-        }
-        self.imageView?.superview?.removeConstraints(removeContraints)
-        
         let originSize = super.intrinsicContentSize
         let imageSize = imageView?.image?.size ?? CGSize(width: 0, height: 0)
         // Fix: title not display normally in XIB

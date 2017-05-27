@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XXVerticalButton'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'An Vertically aligned iOS button write with Swift.'
 
   s.description      = <<-DESC
