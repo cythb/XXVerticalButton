@@ -30,6 +30,8 @@ open class XXVerticalButton: UIButton {
     @IBInspectable
     open var secondaryHighlightedImage: UIImage?
     
+    private var addCenterConstraints = false
+    
     private func configureVertically() {
         guard verticallyAlign else { return }
         
@@ -70,20 +72,6 @@ open class XXVerticalButton: UIButton {
     override open func draw(_ rect: CGRect) {
         configureVertically()
         invalidateIntrinsicContentSize()
-        
-        // remove constrains of lable with image
-        if let cs = self.imageView?.superview?.constraints {
-            let imageContraints = cs.filter({ (constraint) -> Bool in
-                return (constraint.firstItem as? NSObject == self.imageView || constraint.secondItem as? NSObject == self.imageView) && (constraint.firstAttribute == .left || constraint.firstAttribute == .right)
-            })
-            let removeContraints = imageContraints.filter({ (constraint) -> Bool in
-                return constraint.relation == NSLayoutRelation.equal;
-            })
-            for c in removeContraints {
-                c.isActive = false
-            }
-        }
-        
         super.draw(rect)
     }
     
@@ -102,24 +90,41 @@ open class XXVerticalButton: UIButton {
             return size
         }
     }
-
+    
     open override func updateConstraints() {
         guard verticallyAlign else { return super.updateConstraints()}
         guard (secondaryImage == nil) else { return super.updateConstraints()}
         
-        imageView?.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel?.translatesAutoresizingMaskIntoConstraints = false
-        
-        if let imageView = self.imageView {
-            let imageConstraintCenterX = NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: imageView.superview, attribute: .centerX, multiplier: 1.0, constant: 0)
-            imageView.superview?.addConstraint(imageConstraintCenterX)
-        }
-        
-        if let titleLabel = self.titleLabel {
-            titleLabel.textAlignment = .center
-            let imageConstraintCenterX = NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: titleLabel.superview, attribute: .centerX, multiplier: 1.0, constant: 0)
-            titleLabel.superview?.addConstraint(imageConstraintCenterX)
+        if !addCenterConstraints {
+            addCenterConstraints = true
+            imageView?.translatesAutoresizingMaskIntoConstraints = false
+            titleLabel?.translatesAutoresizingMaskIntoConstraints = false
+            
+            if let imageView = self.imageView {
+                let imageConstraintCenterX = NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: imageView.superview, attribute: .centerX, multiplier: 1.0, constant: 0)
+                imageView.superview?.addConstraint(imageConstraintCenterX)
+            }
+            
+            if let titleLabel = self.titleLabel {
+                titleLabel.textAlignment = .center
+                let imageConstraintCenterX = NSLayoutConstraint(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: titleLabel.superview, attribute: .centerX, multiplier: 1.0, constant: 0)
+                titleLabel.superview?.addConstraint(imageConstraintCenterX)
+            }
         }
         super.updateConstraints()
+        
+        // remove constrains of lable with image
+        if let cs = self.imageView?.superview?.constraints {
+            let imageContraints = cs.filter({ (constraint) -> Bool in
+                return (constraint.firstItem as? NSObject == self.imageView || constraint.secondItem as? NSObject == self.imageView) && (constraint.firstAttribute == .left || constraint.firstAttribute == .right)
+            })
+            let removeContraints = imageContraints.filter({ (constraint) -> Bool in
+                return constraint.relation == NSLayoutRelation.equal;
+            })
+            for c in removeContraints {
+                c.isActive = false
+            }
+        }
     }
 }
+
